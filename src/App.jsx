@@ -1,13 +1,12 @@
-import { FaBeer } from "react-icons/fa";
-import "./App.css";
+// src/App.jsx
+import Banner from "./components/Banner";
+import Navbar from "./components/Navbar";
 
 function App() {
   return (
     <>
-      <h1 className="bg-black text-white text-4xl text-center py-6">
-        Hello World!!
-      </h1>
-      <FaBeer />
+      <Navbar />
+      <Banner />
     </>
   );
 }
