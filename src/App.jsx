@@ -4,6 +4,7 @@ import Pricing from "./components/Pricing";
 import ProductsSection from "./components/ProductsSection";
 import Stats from "./components/Stats";
 import Steps from "./components/Steps";
+import Transform from "./components/Transform";
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
       <ProductsSection />
       <Steps />
       <Pricing />
+      <Transform />
     </>
   );
 }
