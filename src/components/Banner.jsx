@@ -4,7 +4,7 @@ import bannerImg from "../assets/banner.png";
 export default function Hero() {
   return (
     <>
-      <section className="max-w-7xl mx-auto bg-white  py-22 flex items-center justify-between">
+      <section className="max-w-6xl mx-auto bg-white  py-22 flex items-center justify-between">
         <div className="max-w-lg flex flex-col gap-5">
           {/* Badge */}
           <div className="flex items-center gap-2 bg-purple-100 text-purple-700 text-xs font-semibold px-4 py-2 rounded-full w-fit border border-purple-200">

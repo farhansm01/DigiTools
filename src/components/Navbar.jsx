@@ -5,7 +5,7 @@ const navLinks = ["Products", "Features", "Pricing", "Testimonials", "FAQ"];
 export default function Navbar() {
   return (
     <nav className="w-full bg-white border-b border-gray-100 px-8 py-4 ">
-      <div className="max-w-7xl mx-auto flex items-center justify-between">
+      <div className="max-w-6xl mx-auto flex items-center justify-between">
         <span className="text-2xl font-bold bg-linear-to-b from-[#4F39F6] to-[#9514FA] bg-clip-text text-transparent">
           DigiTools
         </span>
