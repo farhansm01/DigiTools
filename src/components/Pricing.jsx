@@ -3,7 +3,7 @@ export default function Pricing() {
     <section className="max-w-6xl mx-auto px-6 py-20">
       {/* Heading */}
       <div className="text-center mb-12">
-        <h2 className="text-5xl md:text-5xl font-semibold text-[#101727] mb-3">
+        <h2 className="text-4xl lg:text-5xl font-semibold text-[#101727] mb-3">
           Simple, Transparent Pricing
         </h2>
         <p className="text-gray-400">

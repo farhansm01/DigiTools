@@ -3,7 +3,7 @@ export default function Transform() {
     <section className="w-full bg-linear-to-r from-[#4F39F6] to-[#9514FA] py-20 px-8 flex flex-col items-center text-center gap-6">
       {/* Heading */}
       <div className="flex flex-col gap-3">
-        <h2 className="text-4xl font-bold text-white">
+        <h2 className="text-4xl lg:text-5xl font-bold text-white">
           Ready To Transform Your Workflow?
         </h2>
         <p className="text-purple-200 text-sm leading-relaxed">
@@ -15,7 +15,7 @@ export default function Transform() {
       </div>
 
       {/* Buttons */}
-      <div className="flex items-center gap-4">
+      <div className="flex items-center gap-4 transform-btns">
         <button className="bg-white text-[#4F39F6] text-sm font-semibold px-6 py-3 rounded-full hover:opacity-90 transition-opacity duration-200 cursor-pointer">
           Explore Products
         </button>

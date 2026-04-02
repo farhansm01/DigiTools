@@ -22,10 +22,10 @@ const steps = [
 
 export default function HowItWorks() {
   return (
-    <section className="w-full bg-[#f5f6fa] py-20 ">
+    <section className="w-full bg-[#f5f6fa] py-20 px-8 ">
       {/* Heading */}
       <div className="text-center mb-12">
-        <h2 className="text-5xl font-semibold text-[#101727] mb-3">
+        <h2 className="text-4xl lg:text-5xl font-semibold text-[#101727] mb-3">
           Get Started In 3 Steps
         </h2>
         <p className="text-gray-400 text-sm">

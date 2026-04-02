@@ -13,10 +13,10 @@ const productsPromise = fetch("/products.json").then((res) => {
 export default function ProductsSection() {
   const [activeTab, setActiveTab] = useState("products");
   return (
-    <section className="max-w-6xl mx-auto  py-20 ">
+    <section className="max-w-6xl mx-auto  py-20 px-4">
       {/* Heading */}
       <div className="text-center mb-8">
-        <h2 className="text-5xl font-semibold text-[#101727] mb-3">
+        <h2 className="text-4xl lg:text-5xl font-semibold text-[#101727] mb-3">
           Premium Digital Tools
         </h2>
         <p className="text-gray-400 max-w-md mx-auto leading-relaxed">
