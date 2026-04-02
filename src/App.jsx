@@ -1,4 +1,5 @@
 import Banner from "./components/Banner";
+import Footer from "./components/Footer";
 import Navbar from "./components/Navbar";
 import Pricing from "./components/Pricing";
 import ProductsSection from "./components/ProductsSection";
@@ -16,6 +17,7 @@ function App() {
       <Steps />
       <Pricing />
       <Transform />
+      <Footer />
     </>
   );
 }
