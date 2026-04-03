@@ -1,4 +1,5 @@
 import { Suspense, useState } from "react";
+import { toast } from "react-toastify";
 import CartView from "./CartView";
 import ProductsList from "./ProductsList";
 
@@ -16,16 +17,27 @@ export default function ProductsSection({ cartItems, setCartItems }) {
 
   function handleAddToCart(product) {
     setCartItems([...cartItems, product]);
+    toast.success(`${product.name} added to cart!`, {
+      style: {
+        background: "#EEEEEE",
+      },
+    });
   }
   function handleRemove(id) {
+    const product = cartItems.find(function (item) {
+      return item.id === id;
+    });
     setCartItems(
       cartItems.filter(function (item) {
         return item.id !== id;
       }),
     );
+    toast.error(`${product.name} removed from cart!`);
   }
+
   function handleClearCart() {
     setCartItems([]);
+    toast.success("Checkout successful!");
   }
   return (
     <section className="max-w-6xl mx-auto  py-20 px-4">
@@ -64,7 +76,7 @@ export default function ProductsSection({ cartItems, setCartItems }) {
               : "text-gray-600 hover:text-[#9514FA]"
           }`}
         >
-          Cart
+          Cart({cartItems.length})
         </button>
       </div>
 

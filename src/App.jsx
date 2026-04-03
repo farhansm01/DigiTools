@@ -1,4 +1,6 @@
 import { useState } from "react";
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 import Banner from "./components/Banner";
 import Footer from "./components/Footer";
 import Navbar from "./components/Navbar";
@@ -12,6 +14,7 @@ function App() {
   const [cartItems, setCartItems] = useState([]);
   return (
     <>
+      <ToastContainer position="top-right" />
       <Navbar cartItems={cartItems} />
       <Banner />
       <Stats />
