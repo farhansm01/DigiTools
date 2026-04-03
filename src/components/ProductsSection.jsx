@@ -1,4 +1,5 @@
 import { Suspense, useState } from "react";
+import CartView from "./CartView";
 import ProductsList from "./ProductsList";
 
 // 1. Create the promise OUTSIDE the component
@@ -10,8 +11,22 @@ const productsPromise = fetch("/products.json").then((res) => {
 // 2. Inner component — use() unwraps the promise
 
 // 3. Main Section
-export default function ProductsSection() {
+export default function ProductsSection({ cartItems, setCartItems }) {
   const [activeTab, setActiveTab] = useState("products");
+
+  function handleAddToCart(product) {
+    setCartItems([...cartItems, product]);
+  }
+  function handleRemove(id) {
+    setCartItems(
+      cartItems.filter(function (item) {
+        return item.id !== id;
+      }),
+    );
+  }
+  function handleClearCart() {
+    setCartItems([]);
+  }
   return (
     <section className="max-w-6xl mx-auto  py-20 px-4">
       {/* Heading */}
@@ -55,11 +70,23 @@ export default function ProductsSection() {
 
       {/* Content */}
 
-      <Suspense
-        fallback={<span className="loading loading-dots loading-xl"></span>}
-      >
-        <ProductsList productsPromise={productsPromise} />
-      </Suspense>
+      {activeTab === "products" ? (
+        <Suspense
+          fallback={<span className="loading loading-dots loading-xl"></span>}
+        >
+          <ProductsList
+            productsPromise={productsPromise}
+            handleAddToCart={handleAddToCart}
+            cartItems={cartItems}
+          />
+        </Suspense>
+      ) : (
+        <CartView
+          cartItems={cartItems}
+          handleRemove={handleRemove}
+          handleClearCart={handleClearCart}
+        />
+      )}
     </section>
   );
 }

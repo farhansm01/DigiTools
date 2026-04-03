@@ -1,6 +1,8 @@
-export default function ProductCard({ product }) {
+export default function ProductCard({ product, handleAddToCart, cartItems }) {
+  const added = cartItems.includes(product);
+
   return (
-    <div className="bg-white border border-gray-100 rounded-2xl p-6 flex flex-col gap-4 shadow-sm hover:shadow-md transition-shadow duration-200 relative">
+    <div className="bg-white border border-gray-200 rounded-2xl p-6 flex flex-col gap-4 shadow-sm hover:shadow-md transition-shadow duration-200 relative">
       {/* Tag - top right */}
       <div className="absolute top-4 right-4">
         <span
@@ -60,10 +62,17 @@ export default function ProductCard({ product }) {
 
       {/* Buy Button */}
       <button
-        onClick={function () {}}
-        className="mt-auto w-full bg-linear-to-b from-[#4F39F6] to-[#9514FA] text-white text-sm font-semibold py-3 rounded-full hover:opacity-90 transition-opacity duration-200 cursor-pointer"
+        onClick={() => {
+          handleAddToCart(product);
+        }}
+        disabled={added}
+        className={`mt-auto w-full text-white text-sm font-semibold py-3 rounded-full transition-all duration-200 cursor-pointer ${
+          added
+            ? "bg-green-500"
+            : "bg-linear-to-b from-[#4F39F6] to-[#9514FA] hover:opacity-90"
+        }`}
       >
-        Buy Now
+        {added ? "✓ Added to Cart" : "Buy Now"}
       </button>
     </div>
   );

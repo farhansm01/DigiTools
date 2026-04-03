@@ -1,3 +1,4 @@
+import { useState } from "react";
 import Banner from "./components/Banner";
 import Footer from "./components/Footer";
 import Navbar from "./components/Navbar";
@@ -8,12 +9,13 @@ import Steps from "./components/Steps";
 import Transform from "./components/Transform";
 
 function App() {
+  const [cartItems, setCartItems] = useState([]);
   return (
     <>
-      <Navbar />
+      <Navbar cartItems={cartItems} />
       <Banner />
       <Stats />
-      <ProductsSection />
+      <ProductsSection cartItems={cartItems} setCartItems={setCartItems} />
       <Steps />
       <Pricing />
       <Transform />
