@@ -16,7 +16,6 @@ export default function Footer() {
             </p>
           </div>
 
-          {/* Links columns — 2x2 grid on mobile, row on desktop */}
           <div className="grid grid-cols-2 md:contents gap-8">
             {/* Product Links */}
             <div className="flex flex-col gap-4">

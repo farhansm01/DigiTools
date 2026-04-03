@@ -3,13 +3,9 @@ import { toast } from "react-toastify";
 import CartView from "./CartView";
 import ProductsList from "./ProductsList";
 
-// 1. Create the promise OUTSIDE the component
-//    so it doesn't re-fetch on every render
 const productsPromise = fetch("/products.json").then((res) => {
   return res.json();
 });
-
-// 2. Inner component — use() unwraps the promise
 
 // 3. Main Section
 export default function ProductsSection({ cartItems, setCartItems }) {
