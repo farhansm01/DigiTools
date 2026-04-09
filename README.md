@@ -1,30 +1,77 @@
 # DigiTools
 
-DigiTools is a modern digital products storefront built with React, where users can explore and purchase premium tools like AI writing apps, design templates, stock assets, and automation kits. The app features a dynamic cart system that allows users to add or remove items, view a live cart count in the navbar, and complete checkout without page reloads. Real-time toast notifications provide instant feedback for every cart action. The interface is fully responsive and optimized for all screen sizes. Built with React, Vite, Tailwind CSS, and React Toastify, DigiTools delivers a smooth and interactive shopping experience.
+DigiTools is a modern digital products storefront built with React. Users can browse digital tools, view product details, add items to cart, and manage their selection with a smooth shopping experience.
+
+## 🔗 Live Demo
+https://digitools-fsm.netlify.app/
 
 ---
 
 ## 🚀 Features
 
-- **Dynamic Cart System** — Add and remove products, see a live cart count in the navbar, and clear everything on checkout
-- **Fully Responsive Design** — Optimized for all screen sizes from mobile to desktop
-- **Toast Notifications** — Real-time feedback for every cart action using React Toastify
+- Browse digital products
+- Add to cart functionality
+- Dynamic cart count in navbar
+- Product details view
+- Responsive design
+- Smooth UI interactions
+- Single Page Application (SPA)
 
 ---
 
-## 🛠️ Technologies Used
+## 🛠️ Tech Stack
 
-- React.js
-- Vite
+- React
 - Tailwind CSS
 - DaisyUI
-- JavaScript (ES6+)
-- React Toastify
-- JSON (for product data)
+- JavaScript (ES6)
+- Vite
 
 ---
 
-## Author
+## 📦 Dependencies
 
-- Farhan Sadiq
-- linkedin: https://www.linkedin.com/in/farhan-sadiq19/
+- react
+- react-dom
+- tailwindcss
+- daisyui
+- vite
+
+---
+
+
+## ⚙️ Run Locally
+
+Clone the project
+
+```bash
+git clone https://github.com/farhansm01/DigiTools.git
+```
+
+Go to project directory
+
+```bash
+cd DigiTools
+```
+
+Install dependencies
+
+```bash
+npm install
+```
+
+Run the project
+
+```bash
+npm run dev
+```
+
+---
+
+## 🔗 Links
+
+GitHub Repo  
+https://github.com/farhansm01/DigiTools
+
+Live Site  
+https://digitools-fsm.netlify.app/
